@@ -43,7 +43,9 @@ txt_red = fg('red')
 def set_date(date): 
     # The Website address we will be targeting
     # I concatonate todays date onto the end of the URL
-    url = "https://wol.jw.org/en/wol/h/r1/lp-e/" + date.strftime('%Y/%m/%d')
+    en_url = "https://wol.jw.org/en/wol/h/r1/lp-e/"
+    es_url = "https://wol.jw.org/es/wol/h/r4/lp-s"
+    url = es_url + date.strftime('%Y/%m/%d')
     return url
 
 # Including generic User-Agent http header to make us look like a browser
