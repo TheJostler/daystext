@@ -44,7 +44,7 @@ def set_date(date):
     # The Website address we will be targeting
     # I concatonate todays date onto the end of the URL
     en_url = "https://wol.jw.org/en/wol/h/r1/lp-e/"
-    es_url = "https://wol.jw.org/es/wol/h/r4/lp-s"
+    es_url = "https://wol.jw.org/es/wol/h/r4/lp-s/"
     url = es_url + date.strftime('%Y/%m/%d')
     return url
 
