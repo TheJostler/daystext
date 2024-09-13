@@ -113,7 +113,7 @@ if __name__ == "__main__":
     else:
         date = datetime.today()
 
-    url = set_date(date, "en")
+    url = set_date(date, args.language)
     print(txt_red + date.strftime('%A, %d %B'))
     if args.cache:
         cachedir = "~/.cache/daysText"
