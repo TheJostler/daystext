@@ -101,6 +101,7 @@ if __name__ == "__main__":
         epilog="""Josjuar Lister 2024""")
     parser.add_argument('-d', '--date', help='Specify a date (show today\'s as the default)')
     parser.add_argument('-c', '--cache', help='Enable caching', action='store_true')
+    parser.add_argument('-l', '--language', help='Specify the language to fetch')
     parser.add_argument('-v', '--verbose', help='Increase the verbosity', action='store_true')
 
     # To use arguments parsed here call 'args.<argument>'
