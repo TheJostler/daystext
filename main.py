@@ -43,7 +43,7 @@ txt_red = fg('red')
 def set_date(date, language): 
     # The Website address we will be targeting
     # I concatonate todays date onto the end of the URL
-    switch (language):
+    match (language):
         "en":
             base_url = "https://wol.jw.org/en/wol/h/r1/lp-e/"
         "es":
