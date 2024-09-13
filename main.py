@@ -40,12 +40,15 @@ txt_green = fg('green')
 txt_white = fg('white')
 txt_red = fg('red')
 
-def set_date(date): 
+def set_date(date, language): 
     # The Website address we will be targeting
     # I concatonate todays date onto the end of the URL
-    en_url = "https://wol.jw.org/en/wol/h/r1/lp-e/"
-    es_url = "https://wol.jw.org/es/wol/h/r4/lp-s/"
-    url = es_url + date.strftime('%Y/%m/%d')
+    switch (language):
+        "en":
+            base_url = "https://wol.jw.org/en/wol/h/r1/lp-e/"
+        "es":
+            base_url = "https://wol.jw.org/es/wol/h/r4/lp-s/"
+    url = base_url + date.strftime('%Y/%m/%d')
     return url
 
 # Including generic User-Agent http header to make us look like a browser
@@ -110,10 +113,10 @@ if __name__ == "__main__":
     else:
         date = datetime.today()
 
-    url = set_date(date)
+    url = set_date(date, "en")
     print(txt_red + date.strftime('%A, %d %B'))
     if args.cache:
-        cachedir = "/home/josj/.cache/daysText"
+        cachedir = "~/.cache/daysText"
         cached_date_path = cachedir + "/date"
         cached_text_path = cachedir + "/text"
         cached_date_file = None
