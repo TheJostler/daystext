@@ -126,7 +126,7 @@ if __name__ == "__main__":
             # Check to see if the date is the one we're looking for
             cached_date_file = open(cached_date_path,"r")
             if cached_date_file is None:
-                print("Couldn't open the cached date file at " + cached_date_path + "Fetching the days text")
+                print("Couldn't open the cached date file at " + cached_date_path + " Fetching the days text")
                 exit(print(fetch(url)))
             cached_date = cached_date_file.read()
             if cached_date == date.strftime("%d%m%Y"):
@@ -134,7 +134,7 @@ if __name__ == "__main__":
                 if args.verbose: print("Here's the cached text:")
                 cached_text_file = open(cached_text_path,"r")
                 if cached_text_file is None:
-                    print("Couldn't open the cached text file at " + cached_text_path + "Fetching the days text")
+                    print("Couldn't open the cached text file at " + cached_text_path + " Fetching the days text")
                     exit(print(fetch(url)))
                 print(cached_text_file.read())
             else:
@@ -153,7 +153,7 @@ if __name__ == "__main__":
             try:
                 os.mkdir(cachedir)
             except:
-                print("Couldn't create the cache directory at: " + cachedir + "Nothing was cached")
+                print("Couldn't create the cache directory at: " + cachedir + " Nothing was cached")
                 exit(print(fetch(url, args.verbose)))
             # Cache the days text
             cached_date_file = open(cached_date_path,"w")
