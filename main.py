@@ -50,7 +50,7 @@ def set_date(date, language):
     else:
         print(f"{txt_blue}[warning]{txt_white}I don't recognise this language.")
         print(f"{txt_blue}[warning]{txt_white}Please set the endpoint for this language")
-        print(f"and {txt_blue}[info]{txt_white}Defaulting to English")
+        print(f"{txt_blue}[info]{txt_white}Defaulting to English")
         return set_date(date, "en")
     url = base_url + date.strftime('%Y/%m/%d')
     return url
