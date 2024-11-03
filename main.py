@@ -47,6 +47,8 @@ def set_date(date, language):
         base_url = "https://wol.jw.org/en/wol/h/r1/lp-e/"
     elif language == "es":
         base_url = "https://wol.jw.org/es/wol/h/r4/lp-s/"
+    elif language == "it":
+        base_url = "https://wol.jw.org/it/wol/h/r6/lp-i"
     else:
         print(f"{txt_blue}[warning]{txt_white}I don't recognise this language.")
         print(f"{txt_blue}[info]{txt_white}Please set the endpoint for this language")
