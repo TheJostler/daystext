@@ -88,6 +88,11 @@ def fetch(url, verbose):
     # Use Beautiful Soup Module to parse html then find and extract all paragraph elements
     soup = BeautifulSoup(ret, "html.parser")
     paragraphs = soup.select("p")
+    """
+        TODO
+        CACHE PARAGRAPHS INSTEAD OF JUST THE DAYS TEXT.
+        THIS WILL REDUCE THE AMOUNT THAT WE HAVE TO HIT JW.ORG
+    """
     page = 1
 
     # jw.org sends yesterdays, todays and tomorrows days text, so we need to select the two correct elements.
