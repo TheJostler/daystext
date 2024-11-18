@@ -168,7 +168,7 @@ if __name__ == "__main__":
             try:
                 os.mkdir(cachedir)
             except:
-                print("Couldn't create the cache directory at: " + cachedir + " Nothing was cached")
+                print(f"Couldn't create the cache directory at: {cachedir} Nothing was cached")
                 exit(print(fetch(url, args.verbose)))
             # Cache the days text
             cached_date_file = open(cached_date_path,"w")
@@ -185,6 +185,3 @@ if __name__ == "__main__":
 
     else:
         print(fetch(url, args.verbose))
-    
-else:
-    exit(1)
