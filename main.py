@@ -27,12 +27,13 @@ import os
 import urllib3
 import requests
 import sys
-from bs4 import BeautifulSoup
 import argparse
 import webbrowser
+from bs4 import BeautifulSoup
 from colored import fg
 from datetime import datetime
 from dateutil.parser import parse
+from pip._internal.locations import USER_CACHE_DIR as user_cache_dir
 
 # include these variables in a print() function to output different clours to your terminal
 txt_blue = fg('blue')
@@ -123,7 +124,7 @@ if __name__ == "__main__":
     url = set_date(date, args.language)
     print(txt_red + date.strftime('%A, %d %B'))
     if args.cache:
-        cachedir = "~/.cache/daysText"
+        cachedir = user_cache_dir.replace("/.cache/pip", "/.cache/daysTest")
         cached_date_path = cachedir + "/date"
         cached_text_path = cachedir + "/text"
         cached_date_file = None
