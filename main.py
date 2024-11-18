@@ -87,6 +87,10 @@ def fetch(url, verbose):
 
     # Use Beautiful Soup Module to parse html then find and extract all paragraph elements
     soup = BeautifulSoup(ret, "html.parser")
+
+    return(process(soup))
+
+def process(soup):
     paragraphs = soup.select("p")
     """
         TODO
