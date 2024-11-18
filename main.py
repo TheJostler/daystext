@@ -93,17 +93,15 @@ def fetch(url, verbose):
         CACHE PARAGRAPHS INSTEAD OF JUST THE DAYS TEXT.
         THIS WILL REDUCE THE AMOUNT THAT WE HAVE TO HIT JW.ORG
     """
-    page = 1
 
     # jw.org sends yesterdays, todays and tomorrows days text, so we need to select the two correct elements.
     # Page 3 is the scripture quote for today.
     # Page 4 is the comments
-    for p in paragraphs:
+    for page, p in enumerate(paragraphs):
         if page == 3:
             text = txt_green + p.getText() + "\n" + txt_white
         if page == 4:
             text = text + p.getText()
-        page = page+1
 
     return text
 
