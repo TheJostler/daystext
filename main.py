@@ -131,7 +131,7 @@ if __name__ == "__main__":
     url = set_date(date, args.language)
     print(txt_red + date.strftime('%A, %d %B'))
     if args.cache:
-        cachedir = user_cache_dir.replace("/.cache/pip", "/.cache/daysTest")
+        cachedir = user_cache_dir.replace("/.cache/pip", "/.cache/daystext")
         cached_date_path = cachedir + "/date"
         cached_text_path = cachedir + "/text"
         cached_date_file = None
