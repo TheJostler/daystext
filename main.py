@@ -1,9 +1,9 @@
 #!/usr/bin/env python
  
-# Please contact me by emailing: josj@wjaag.com
+# Please contact me by emailing: josj@tegosec.com
 #
 # LICENSE
-# Copyright (c) 2022 Josjuar Lister
+# Copyright (c) 2022-2024 Josjuar Lister
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -102,9 +102,9 @@ def process(soup):
     # Page 3 is the scripture quote for today.
     # Page 4 is the comments
     for page, p in enumerate(paragraphs):
-        if page == 3:
+        if page == 2:
             text = txt_green + p.getText() + "\n" + txt_white
-        if page == 4:
+        if page == 3:
             text = text + p.getText()
 
     return text
