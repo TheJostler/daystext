@@ -79,8 +79,8 @@ def fetch(url, verbose):
             try:
                 r = requests.get(url, params=payload, headers=HEADERS, timeout=15)
             except:
-                print(txt_red + "  (warn)\t" + txt_white + " Timed out, tree times, skipping")
-                pass
+                print(txt_red + "  (warn)\t" + txt_white + " Timed out, three times, giving up")
+                exit(1)
 
     # Decode response from binary into UTF-8 charcters
     ret = r.content.decode('utf-8')
